@@ -1,4 +1,4 @@
-#Test project
+# Test project
 
 Project idea: Pinterest
 
