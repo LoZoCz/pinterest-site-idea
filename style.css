@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Noto Sans";
+  src: url("assets/fonts/NotoSansJP-VariableFont_wght.ttf");
+}
+* {
+  font-family: "Noto Sans";
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 1rem;
+  font-size: 1.25rem;
+  background-color: #23243b;
+  color: #fafeff;
+}/*# sourceMappingURL=style.css.map */
