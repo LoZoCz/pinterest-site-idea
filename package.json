@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "lodash": "^4.17.21",
+    "sass": "^1.63.6",
     "validator": "^13.9.0"
   }
 }
