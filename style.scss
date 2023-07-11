@@ -22,8 +22,8 @@ body {
   background-color: $color-1;
   color: $color-4;
 
-  & > * {
-    padding-inline: 8rem;
+  & > *:not(.main-head) {
+    padding-inline: 12rem 16rem;
     position: relative;
   }
 }
@@ -34,6 +34,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 12rem;
 
   a {
     color: $color-4;
@@ -125,7 +126,7 @@ body {
   width: 1px;
   background-color: $color-2;
   top: 50%;
-  right: 8rem;
+  right: 10rem;
   transform: translateY(-50%);
 
   .indicator {
@@ -146,6 +147,120 @@ body {
   @for $i from 0 through 2 {
     .indicator:nth-child(#{$i + 1}) {
       top: 50% * $i;
+    }
+  }
+}
+
+.skills {
+  display: grid;
+  gap: 2rem;
+  padding-block: 4rem;
+
+  .skills-title {
+    color: $color-3;
+    font-size: 3rem;
+    position: relative;
+
+    &::before {
+      content: "Services";
+      position: absolute;
+      color: $color-4;
+      left: 0rem;
+      top: -1rem;
+      font-size: 0.8rem;
+      font-weight: 400;
+    }
+
+    &::after {
+      content: "";
+      background-color: $color-3;
+      width: 10%;
+      height: 5px;
+      position: absolute;
+      left: 0;
+      bottom: -1rem;
+    }
+  }
+
+  .skills-box {
+    width: 70%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2.5rem;
+    justify-content: center;
+
+    .skills-item {
+      background-color: lighten($color-1, 10%);
+      color: $color-4;
+      padding: 3rem 1rem 1rem 1rem;
+      border-radius: 0.1rem;
+
+      i {
+        font-size: 2rem;
+        color: $color-3;
+      }
+
+      .skill-title {
+        font-weight: 700;
+        font-size: 1.25rem;
+        margin-block: 10px;
+      }
+
+      .skill-desc {
+        font-size: 0.9rem;
+        margin-block: 10px;
+      }
+    }
+  }
+}
+
+.main-foot {
+  padding-block: 4rem;
+
+  .foot-title {
+    color: $color-3;
+    font-size: 2rem;
+  }
+
+  form {
+    display: grid;
+    gap: 2rem;
+    width: 30%;
+
+    label {
+      display: none;
+    }
+
+    input {
+      width: 100%;
+      padding: 1rem;
+      background-color: lighten($color-1, 10%);
+      border: none;
+      outline: none;
+      border-radius: 0.1rem;
+      color: $color-4;
+
+      &::placeholder {
+        color: $color-1;
+      }
+    }
+
+    button {
+      justify-self: end;
+      padding: 1rem 2rem;
+      background-color: $color-3;
+      color: #23243b;
+      font-size: 1.05rem;
+      border: none;
+      outline: none;
+      font-weight: 600;
+      cursor: pointer;
+      transition: color ease-in-out 200ms;
+
+      &:hover {
+        color: #fafeff;
+      }
     }
   }
 }

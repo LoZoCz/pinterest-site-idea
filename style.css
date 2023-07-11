@@ -13,8 +13,8 @@ body {
   background-color: #23243b;
   color: #fafeff;
 }
-body > * {
-  padding-inline: 8rem;
+body > *:not(.main-head) {
+  padding-inline: 12rem 16rem;
   position: relative;
 }
 
@@ -24,6 +24,7 @@ body > * {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-inline: 12rem;
 }
 .main-head a {
   color: #fafeff;
@@ -103,7 +104,7 @@ body > * {
   width: 1px;
   background-color: #515368;
   top: 50%;
-  right: 8rem;
+  right: 10rem;
   transform: translateY(-50%);
 }
 .wrapper-indicator .indicator {
@@ -127,4 +128,106 @@ body > * {
 }
 .wrapper-indicator .indicator:nth-child(3) {
   top: 100%;
+}
+
+.skills {
+  display: grid;
+  gap: 2rem;
+  padding-block: 4rem;
+}
+.skills .skills-title {
+  color: #fe4a57;
+  font-size: 3rem;
+  position: relative;
+}
+.skills .skills-title::before {
+  content: "Services";
+  position: absolute;
+  color: #fafeff;
+  left: 0rem;
+  top: -1rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+}
+.skills .skills-title::after {
+  content: "";
+  background-color: #fe4a57;
+  width: 10%;
+  height: 5px;
+  position: absolute;
+  left: 0;
+  bottom: -1rem;
+}
+.skills .skills-box {
+  width: 70%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 2.5rem;
+  justify-content: center;
+}
+.skills .skills-box .skills-item {
+  background-color: #36385b;
+  color: #fafeff;
+  padding: 3rem 1rem 1rem 1rem;
+  border-radius: 0.1rem;
+}
+.skills .skills-box .skills-item i {
+  font-size: 2rem;
+  color: #fe4a57;
+}
+.skills .skills-box .skills-item .skill-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  margin-block: 10px;
+}
+.skills .skills-box .skills-item .skill-desc {
+  font-size: 0.9rem;
+  margin-block: 10px;
+}
+
+.main-foot {
+  padding-block: 4rem;
+}
+.main-foot .foot-title {
+  color: #fe4a57;
+  font-size: 2rem;
+}
+.main-foot form {
+  display: grid;
+  gap: 2rem;
+  width: 30%;
+}
+.main-foot form label {
+  display: none;
+}
+.main-foot form input {
+  width: 100%;
+  padding: 1rem;
+  background-color: #36385b;
+  border: none;
+  outline: none;
+  border-radius: 0.1rem;
+  color: #fafeff;
+}
+.main-foot form input::-moz-placeholder {
+  color: #23243b;
+}
+.main-foot form input::placeholder {
+  color: #23243b;
+}
+.main-foot form button {
+  justify-self: end;
+  padding: 1rem 2rem;
+  background-color: #fe4a57;
+  color: #23243b;
+  font-size: 1.05rem;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  cursor: pointer;
+  transition: color ease-in-out 200ms;
+}
+.main-foot form button:hover {
+  color: #fafeff;
 }/*# sourceMappingURL=style.css.map */
