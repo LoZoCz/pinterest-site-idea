@@ -24,6 +24,7 @@ body {
 
   & > * {
     padding-inline: 8rem;
+    position: relative;
   }
 }
 
@@ -83,5 +84,68 @@ body {
 
 .main-cont {
   display: grid;
-  gap: 1rem;
+  gap: 2rem;
+  padding-block: 4rem;
+
+  & > * {
+    margin: 0;
+  }
+
+  .main-title {
+    font-size: 3rem;
+    font-weight: 400;
+    line-height: 3rem;
+  }
+
+  .main-desc {
+    width: 35ch;
+    color: $color-2;
+  }
+
+  .main-btn {
+    background-color: $color-3;
+    color: $color-4;
+    width: 20%;
+    border: none;
+    outline: none;
+    padding: clamp(10px, 5vw, 1rem);
+    border-radius: 0.1rem;
+    cursor: pointer;
+    transition: background-color ease-in-out 200ms;
+
+    &:hover {
+      background-color: lighten($color-3, 10%);
+    }
+  }
+}
+
+.wrapper-indicator {
+  position: absolute;
+  height: 10rem;
+  width: 1px;
+  background-color: $color-2;
+  top: 50%;
+  right: 8rem;
+  transform: translateY(-50%);
+
+  .indicator {
+    width: 1rem;
+    aspect-ratio: 1;
+    background-color: $color-1;
+    outline: 1px solid $color-3;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+  }
+
+  .active {
+    background-color: $color-3;
+  }
+
+  @for $i from 0 through 2 {
+    .indicator:nth-child(#{$i + 1}) {
+      top: 50% * $i;
+    }
+  }
 }

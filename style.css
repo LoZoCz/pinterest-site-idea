@@ -15,6 +15,7 @@ body {
 }
 body > * {
   padding-inline: 8rem;
+  position: relative;
 }
 
 .main-head {
@@ -62,4 +63,68 @@ body > * {
 }
 .main-head .options-list .option:hover::after {
   width: 100%;
+}
+
+.main-cont {
+  display: grid;
+  gap: 2rem;
+  padding-block: 4rem;
+}
+.main-cont > * {
+  margin: 0;
+}
+.main-cont .main-title {
+  font-size: 3rem;
+  font-weight: 400;
+  line-height: 3rem;
+}
+.main-cont .main-desc {
+  width: 35ch;
+  color: #515368;
+}
+.main-cont .main-btn {
+  background-color: #fe4a57;
+  color: #fafeff;
+  width: 20%;
+  border: none;
+  outline: none;
+  padding: clamp(10px, 5vw, 1rem);
+  border-radius: 0.1rem;
+  cursor: pointer;
+  transition: background-color ease-in-out 200ms;
+}
+.main-cont .main-btn:hover {
+  background-color: #fe7d86;
+}
+
+.wrapper-indicator {
+  position: absolute;
+  height: 10rem;
+  width: 1px;
+  background-color: #515368;
+  top: 50%;
+  right: 8rem;
+  transform: translateY(-50%);
+}
+.wrapper-indicator .indicator {
+  width: 1rem;
+  aspect-ratio: 1;
+  background-color: #23243b;
+  outline: 1px solid #fe4a57;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+}
+.wrapper-indicator .active {
+  background-color: #fe4a57;
+}
+.wrapper-indicator .indicator:nth-child(1) {
+  top: 0%;
+}
+.wrapper-indicator .indicator:nth-child(2) {
+  top: 50%;
+}
+.wrapper-indicator .indicator:nth-child(3) {
+  top: 100%;
 }/*# sourceMappingURL=style.css.map */
